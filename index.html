@@ -6,68 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Crystal Game</title>
-
-    <style>
-        img {
-            width: 400px;
-            height: 400px;
-        }
-
-        img:hover {
-            cursor: pointer;
-        }
-        
-    </style>
-
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
 
 <body>
-    <h1>Target Number: <span id="target-number"></span></h1>
+    <div class="content">
 
-    <br>
-    <br>
+        <h1>Target Number:<span id="target-number"></span></h1>
 
-    <div id="crystals">
-        <img src="https://i.pinimg.com/originals/0e/e4/d1/0ee4d155315e22bb8148f9092c422c43.png">
-        <img src="https://i.pinimg.com/originals/f8/e6/75/f8e675998d0befcdf78cf24f8fa2419b.png">
-        <img src="https://i.pinimg.com/originals/86/6f/72/866f72439265b9617f668f2236cf0ac4.png">
+        <br>
+        <br>
+
+        <div>
+            <img src="./images/crystal3.png" alt="crystal image 3" class="image" value="7">
+            <img src="./images/crystal2.png" alt="crystal image 2" class="image" value="4">
+            <img src="./images/crystal1.png" alt="crystal image 1" class="image" value="19">
+        </div>
+
+        <h1>Counter:<span id="userCounter"></span></h1>
     </div>
 
-    <h1>Counter:<span id="userCounter"></span></h1>
-
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-    <script>
-
-        var mainNumber = 78;
-        $("#target-number").text(mainNumber);
-
-        var crystalNumbers = [5, 9, 30, 2, 4, 15];
-
-        var counter = 0;
-
-        for (var i = 0; i < crystalNumbers.length; i + 2) {
-
-            $("img").attr("value", crystalNumbers[i]);
-        };
-
-
-        $("img").on("click", function () {
-
-            var crystalValue = ($(this).attr("value"));
-
-            crystalValue = parseInt(crystalValue);
-
-
-            counter += crystalValue;
-            $("#userCounter").text(counter);
-
-
-        });
-
-
-    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./js/javascript.js"></script>
 
 </body>
-
 </html>
